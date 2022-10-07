@@ -1,0 +1,19 @@
+Airports:
+    LOAD
+	
+    Airport,
+    City,
+    Price,
+	Cost,
+
+    Len(Airport) AS LengthAirport, 
+    Upper(Country) AS Country,
+	
+
+    'check' as Flag
+	
+    Price * 10 as PriceMultiplied,
+	Price - Cost as ProfitMargin 
+
+    FROM [lib://data/airports.csv]
+    (txt, utf8, embedded labels, delimiter is ',');

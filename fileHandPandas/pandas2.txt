@@ -1,0 +1,37 @@
+SalesData:
+LOAD
+ 
+    "# of Days Late",
+    "# of Days to Ship",
+    BackOrder,
+    Cost,
+    "Customer Number",
+    "Date",
+    GrossSales,
+    "Invoice Date",
+    "Invoice Number",
+    "Item Desc",
+    "Item Number",
+    Margin,
+    "Open Qty",
+    OpenOrder,
+    "Order Number",
+    "Promised Delivery Date",
+    Sales,
+    "Sales Qty",
+    "Sales Rep Number",
+    SalesKey,
+
+    
+
+// fieldtype = Hard Coded
+'test' as Flag,
+
+
+// fieldtype = Formula
+len(Cost) as Length
+
+
+    
+FROM [lib://DataFiles/Sales.xlsx]
+(ooxml, embedded labels, table is [Sales data]);
